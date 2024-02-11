@@ -1,3 +1,6 @@
+# Stock Trading Mock Application
+This Stock Trading Mock Application is made to demonstrate the DJANGO DRF with Mock Data. Unit test, Integration tests are written and can be executed.
+For more informatiton please contact at anjum.farrukh@gmail.com
 # Run Migrations
 ### To Run in Docker
 ```
