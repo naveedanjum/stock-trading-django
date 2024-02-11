@@ -50,6 +50,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'investment_site.urls'
+ALPHA_VANTAGE_API_KEY = 'JLKQPF3ZT1E6D2AU'
 
 TEMPLATES = [
     {
