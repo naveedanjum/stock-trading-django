@@ -1,4 +1,11 @@
 # Run Migrations
+### To Run in Docker
+```
+cd investment_site
+```
+```
+docker-compose up --build
+```
 
 ```
 python manage.py makemigrations
