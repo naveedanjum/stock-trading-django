@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:8.0
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: investment_db
+      MYSQL_USER: investment_user
+      MYSQL_PASSWORD: investment_password
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "3306:3306"
+
+  web:
+    build: .
+    command: gunicorn investment_site.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_HOST: db
+      DATABASE_NAME: investment_db
+      DATABASE_USER: investment_user
+      DATABASE_PASSWORD: investment_password
+      DJANGO_SETTINGS_MODULE: investment_site.settings
+
+volumes:
+  mysql_data:

@@ -3,4 +3,5 @@ djangorestframework
 requests
 Faker
 mysqlclient
+gunicorn
 drf-spectacular
