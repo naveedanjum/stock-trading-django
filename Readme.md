@@ -12,6 +12,9 @@ and execute
 cd investment_site
 ```
 ```
+pip install -r requirements.txt
+```
+```
 python manage.py runserver
 ```
 
