@@ -1,7 +1,23 @@
 # Stock Trading Mock Application
 This Stock Trading Mock Application is made to demonstrate the DJANGO DRF with Mock Data. Unit test, Integration tests are written and can be executed.
-For more informatiton please contact at anjum.farrukh@gmail.com
-# Run Migrations
+For more information please contact at anjum.farrukh@gmail.com
+
+### For Documentation of API Endpoints
+http://localhost:8000/api/docs
+
+### For Standalone
+Configure the Database Settings in settings.py
+and execute
+```
+cd investment_site
+```
+```
+python manage.py runserver
+```
+
+# OR
+
+## Run Migrations
 ### To Run in Docker
 ```
 cd investment_site
@@ -25,6 +41,11 @@ python manage.py makemigrations
 ```
 python manage.py generate_fake_data --companies 40 --days 30
 ```
+
+### For Documentation of API Endpoints
+http://localhost:8000/api/docs
+
+# If you want to use Docker Standalone MySQL
 ## Docker for MySQL
 ```
 docker run  --detach   --name stock_mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=stock_db -e MYSQL_USER=stock_user -e MYSQL_PASSWORD=stock_pass -d mysql
