@@ -6,6 +6,14 @@ cd investment_site
 ```
 docker-compose up --build
 ```
+#### In Order to run Test Cases (Unit Tests)
+```
+python manage.py test portfolio.tests.models_tests
+```
+#### In Order to run Test Cases (Integration API Tests)
+```
+python manage.py test portfolio.tests.api_tests
+```
 
 ```
 python manage.py makemigrations
