@@ -6,7 +6,7 @@ For more information please contact at anjum.farrukh@gmail.com
 http://farrukhnaveed.co:8000/api/docs/
 
 ### For Standalone
-Configure the Database Settings in settings.py
+Configure the Database Settings in .env File
 and execute
 ```
 cd investment_site
@@ -46,6 +46,10 @@ python manage.py generate_fake_data --companies 40 --days 30
 ```
 
 ### For Documentation of API Endpoints
+#### Online
+http://farrukhnaveed.co:8000/api/docs/
+
+#### Locally
 http://localhost:8000/api/docs
 
 # If you want to use Docker Standalone MySQL
