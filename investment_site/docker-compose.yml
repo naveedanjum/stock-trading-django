@@ -6,10 +6,10 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: investment_db
-      MYSQL_USER: investment_user
-      MYSQL_PASSWORD: investment_password
-      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     ports:
       - "3306:3306"
 
@@ -22,11 +22,9 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    env_file:
+      - ./.env
     environment:
-      DATABASE_HOST: db
-      DATABASE_NAME: investment_db
-      DATABASE_USER: investment_user
-      DATABASE_PASSWORD: investment_password
       DJANGO_SETTINGS_MODULE: investment_site.settings
 
 volumes:

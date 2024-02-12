@@ -3,7 +3,7 @@ This Stock Trading Mock Application is made to demonstrate the DJANGO DRF with M
 For more information please contact at anjum.farrukh@gmail.com
 
 ### For Documentation of API Endpoints
-http://localhost:8000/api/docs
+http://farrukhnaveed.co:8000/api/docs/
 
 ### For Standalone
 Configure the Database Settings in settings.py
